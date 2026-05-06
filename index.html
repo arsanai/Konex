@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Konex Automation - Automatización con IA para clínicas y pymes: menos tareas repetitivas, más citas y mejor atención 24/7">
+    <title>Konex Automation | Automatización con IA para Clínicas y Pymes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=DM+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        (function () {
+            var saved = localStorage.getItem('konex-theme');
+            document.documentElement.setAttribute('data-theme', saved === 'dark' ? 'dark' : 'light');
+        })();
+    </script>
+    <link rel="icon" type="image/png" href="images/logopng_red.png">
+</head>
+
+<body>
+    <div class="particles-container" id="particles"></div>
+
+    <div id="page-wrapper">
+
+        <!-- ═══ NAVBAR ═══ -->
+        <nav class="navbar" id="navbar">
+            <div class="container nav-container">
+                <a href="#" class="nav-logo" aria-label="Ir al inicio">
+                    <img src="images/logopng_red_fix.png" alt="Konex Automation" class="logo-img">
+                </a>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#" class="nav-link">Inicio</a></li>
+                    <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                    <li><a href="#casos" class="nav-link">Ejemplos</a></li>
+                    <li><a href="#contacto" class="btn-primary-small">Contactar</a></li>
+                </ul>
+                <div class="nav-actions">
+
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- ═══ HERO ═══ -->
+        <section class="hero" id="hero">
+            <div class="container" style="display:flex;flex-direction:column;gap:64px;">
+                <div class="hero-content" style="text-align:center;margin:0 auto;max-width:700px;">
+                    <div class="hero-badge">
+                        <span class="badge-dot"></span>
+                        Automatización con IA · Clínicas y Pymes
+                    </div>
+                    <h1 class="hero-title" style="margin-bottom:48px;">
+                        Tu negocio trabajando,<br><span class="gradient-text" style="display:inline-block;">incluso
+                            cuando no estás</span>
+                    </h1>
+                    <p class="hero-subtitle" style="text-align:center;margin-left:auto;margin-right:auto;">
+                        Diseñamos soluciones a medida que automatizan tareas, optimizan procesos y mejoran cómo funciona
+                        tu negocio en el día a día.
+                    </p>
+                    <div class="hero-cta" style="justify-content:center;">
+                        <a href="#contacto" class="btn-primary">
+                            <span>Automatizar mi negocio</span>
+                            <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                                <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <a href="#servicios" class="btn-secondary">Ver servicios</a>
+                    </div>
+                    <div class="hero-stats" style="justify-content:center;">
+                        <div class="stat-item">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">Procesos activos</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number">−50%</span>
+                            <span class="stat-label">Tareas manuales</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number">+30%</span>
+                            <span class="stat-label">Productividad</span>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </section>
+
+        <!-- ═══ SOCIAL PROOF ═══ -->
+        <section class="social-prof">
+            <div class="container">
+
+                <div class="marquee-container">
+                    <div class="marquee-content">
+                        <div class="tech-item">
+                            <div class="tech-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                    style="color: #64748b;">
+                                    <path
+                                        d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z">
+                                    </path>
+                                    <path
+                                        d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z">
+                                    </path>
+                                    <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5-4 5-4"></path>
+                                    <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 4-5 4-5"></path>
+                                </svg></div><span class="tech-name">Antigravity</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon-wrap"><img src="https://cdn.simpleicons.org/supabase" alt="Supabase">
+                            </div><span class="tech-name">Supabase</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon-wrap"><img src="https://cdn.simpleicons.org/postgresql"
+                                    alt="Postgres"></div><span class="tech-name">Postgres</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon-wrap"><img src="https://cdn.simpleicons.org/qdrant" alt="Qdrant">
+                            </div><span class="tech-name">Qdrant</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon-wrap"><img src="https://cdn.simpleicons.org/chatwoot" alt="Chatwoot">
+                            </div><span class="tech-name">Chatwoot</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                    style="color: #0284c7;">
+                                    <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                                    <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                                    <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                                    <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                                </svg></div><span class="tech-name">Dockploy</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon-wrap"><img src="https://cdn.simpleicons.org/docker" alt="Docker">
+                            </div><span class="tech-name">Docker</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon-wrap"><img src="https://cdn.simpleicons.org/mariadb" alt="MariaDB">
+                            </div><span class="tech-name">MariaDB</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon-wrap"><img src="https://cdn.simpleicons.org/github" alt="GitHub">
+                            </div><span class="tech-name">GitHub</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon-wrap"><img src="https://cdn.simpleicons.org/anthropic" alt="Claude">
+                            </div><span class="tech-name">Claude</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon-wrap"><img src="https://cdn.simpleicons.org/n8n" alt="n8n"></div><span
+                                class="tech-name">n8n</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon-wrap"><img src="https://cdn.simpleicons.org/make" alt="Make"></div>
+                            <span class="tech-name">Make</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon-wrap"><img src="https://cdn.simpleicons.org/zapier" alt="Zapier">
+                            </div><span class="tech-name">Zapier</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon-wrap"><img src="https://cdn.simpleicons.org/stripe" alt="Stripe">
+                            </div><span class="tech-name">Stripe</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon-wrap"><img src="https://cdn.simpleicons.org/openai" alt="OpenAI">
+                            </div><span class="tech-name">OpenAI</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon-wrap"><img src="https://cdn.simpleicons.org/whatsapp"
+                                    alt="WhatsApp Business"></div><span class="tech-name">WhatsApp Business</span>
+                        </div>
+                    </div>
+                    <!-- Duplicado para efecto infinito sin cortes -->
+                    <div class="marquee-content" aria-hidden="true">
+                        <div class="tech-item">
+                            <div class="tech-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                    style="color: #64748b;">
+                                    <path
+                                        d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z">
+                                    </path>
+                                    <path
+                                        d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z">
+                                    </path>
+                                    <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5-4 5-4"></path>
+                                    <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 4-5 4-5"></path>
+                                </svg></div><span class="tech-name">Antigravity</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon-wrap"><img src="https://cdn.simpleicons.org/supabase" alt="Supabase">
+                            </div><span class="tech-name">Supabase</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon-wrap"><img src="https://cdn.simpleicons.org/postgresql"
+                                    alt="Postgres"></div><span class="tech-name">Postgres</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon-wrap"><img src="https://cdn.simpleicons.org/qdrant" alt="Qdrant">
+                            </div><span class="tech-name">Qdrant</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon-wrap"><img src="https://cdn.simpleicons.org/chatwoot" alt="Chatwoot">
+                            </div><span class="tech-name">Chatwoot</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                    style="color: #0284c7;">
+                                    <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                                    <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                                    <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                                    <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                                </svg></div><span class="tech-name">Dockploy</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon-wrap"><img src="https://cdn.simpleicons.org/docker" alt="Docker">
+                            </div><span class="tech-name">Docker</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon-wrap"><img src="https://cdn.simpleicons.org/mariadb" alt="MariaDB">
+                            </div><span class="tech-name">MariaDB</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon-wrap"><img src="https://cdn.simpleicons.org/github" alt="GitHub">
+                            </div><span class="tech-name">GitHub</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon-wrap"><img src="https://cdn.simpleicons.org/anthropic" alt="Claude">
+                            </div><span class="tech-name">Claude</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon-wrap"><img src="https://cdn.simpleicons.org/n8n" alt="n8n"></div><span
+                                class="tech-name">n8n</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon-wrap"><img src="https://cdn.simpleicons.org/make" alt="Make"></div>
+                            <span class="tech-name">Make</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon-wrap"><img src="https://cdn.simpleicons.org/zapier" alt="Zapier">
+                            </div><span class="tech-name">Zapier</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon-wrap"><img src="https://cdn.simpleicons.org/stripe" alt="Stripe">
+                            </div><span class="tech-name">Stripe</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon-wrap"><img src="https://cdn.simpleicons.org/openai" alt="OpenAI">
+                            </div><span class="tech-name">OpenAI</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon-wrap"><img src="https://cdn.simpleicons.org/whatsapp"
+                                    alt="WhatsApp Business"></div><span class="tech-name">WhatsApp Business</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ SERVICIOS ═══ -->
+        <section class="services" id="servicios">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Nuestros servicios</span>
+                    <h2 class="section-title">Automatizaciones que <span class="gradient-text">transforman</span> tu
+                        negocio</h2>
+                    <p class="section-subtitle">Procesos, clientes y tareas funcionando automáticamente</p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-card-header" onclick="openServiceModal('resenas')">
+                            <img src="images/resenas.png" alt="Generación de Reseñas" class="service-cover-image">
+                            <div class="service-image-overlay"><span>Más información</span></div>
+                        </div>
+                        <div class="service-card-body">
+                            <h3 class="service-card-title">Generación de Reseñas Automática</h3>
+                            <p class="service-card-desc">Pide opinión a tus clientes automáticamente y solicita reseñas
+                                solo a quienes han tenido una buena experiencia.</p>
+                        </div>
+                        <button class="service-add-btn" data-service="Generación de Reseñas Automática"
+                            aria-label="Añadir servicio">
+                            <span>Añadir a la lista</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round">
+                                <line x1="12" y1="5" x2="12" y2="19" />
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-card-header" onclick="openServiceModal('citas')">
+                            <img src="images/recordatorios.png" alt="Recordatorios de Citas"
+                                class="service-cover-image">
+                            <div class="service-image-overlay"><span>Más información</span></div>
+                        </div>
+                        <div class="service-card-body">
+                            <h3 class="service-card-title">Recordatorios de Citas</h3>
+                            <p class="service-card-desc">Envía recordatorios automáticos antes de cada cita para reducir
+                                ausencias y mantener tu agenda siempre llena.</p>
+                        </div>
+                        <button class="service-add-btn" data-service="Recordatorios de Citas"
+                            aria-label="Añadir servicio">
+                            <span>Añadir a la lista</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round">
+                                <line x1="12" y1="5" x2="12" y2="19" />
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-card-header" onclick="openServiceModal('formularios')">
+                            <img src="images/formulario.png" alt="Gestión de Formularios" class="service-cover-image">
+                            <div class="service-image-overlay"><span>Más información</span></div>
+                        </div>
+                        <div class="service-card-body">
+                            <h3 class="service-card-title">Gestión Automática de Formularios</h3>
+                            <p class="service-card-desc">Recoge los datos de tus clientes automáticamente, guárdalos en
+                                tu sistema y responde al instante.</p>
+                        </div>
+                        <button class="service-add-btn" data-service="Gestión Automática de Formularios"
+                            aria-label="Añadir servicio">
+                            <span>Añadir a la lista</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round">
+                                <line x1="12" y1="5" x2="12" y2="19" />
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-card-header" onclick="openServiceModal('recuperacion')">
+                            <img src="images/reactivacion.png" alt="Recuperación de Clientes"
+                                class="service-cover-image">
+                            <div class="service-image-overlay"><span>Más información</span></div>
+                        </div>
+                        <div class="service-card-body">
+                            <h3 class="service-card-title">Recuperación de Clientes</h3>
+                            <p class="service-card-desc">Vuelve a conectar con clientes que no han vuelto mediante
+                                mensajes automáticos y aumenta tus ventas.</p>
+                        </div>
+                        <button class="service-add-btn" data-service="Recuperación de Clientes"
+                            aria-label="Añadir servicio">
+                            <span>Añadir a la lista</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round">
+                                <line x1="12" y1="5" x2="12" y2="19" />
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-card-header" onclick="openServiceModal('chat')">
+                            <img src="images/chat.png" alt="Chat Automático" class="service-cover-image">
+                            <div class="service-image-overlay"><span>Más información</span></div>
+                        </div>
+                        <div class="service-card-body">
+                            <h3 class="service-card-title">Chat Automático en tu Web</h3>
+                            <p class="service-card-desc">Responde dudas de tus clientes al instante desde tu web sin
+                                necesidad de atención manual constante.</p>
+                        </div>
+                        <button class="service-add-btn" data-service="Chat Automático en tu Web"
+                            aria-label="Añadir servicio">
+                            <span>Añadir a la lista</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round">
+                                <line x1="12" y1="5" x2="12" y2="19" />
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-card-header" style="background:#07000e;"
+                            onclick="openServiceModal('emails')">
+                            <img src="images/emails.png" alt="Organización de Emails" class="service-cover-image">
+                            <div class="service-image-overlay"><span>Más información</span></div>
+                        </div>
+                        <div class="service-card-body">
+                            <h3 class="service-card-title">Organización Inteligente de Emails</h3>
+                            <p class="service-card-desc">Ordena tus correos automáticamente según su tipo para que
+                                encuentres lo importante al instante.</p>
+                        </div>
+                        <button class="service-add-btn" data-service="Organización Inteligente de Emails"
+                            aria-label="Añadir servicio">
+                            <span>Añadir a la lista</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round">
+                                <line x1="12" y1="5" x2="12" y2="19" />
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-card-header" onclick="openServiceModal('asistente')">
+                            <img src="images/asistente.jpg" alt="Asistente Interno" class="service-cover-image">
+                            <div class="service-image-overlay"><span>Más información</span></div>
+                        </div>
+                        <div class="service-card-body">
+                            <h3 class="service-card-title">Asistente Interno Inteligente</h3>
+                            <p class="service-card-desc">Resuelve al instante las dudas de tu equipo sobre tareas y
+                                procesos. Centraliza el conocimiento de tu empresa.</p>
+                        </div>
+                        <button class="service-add-btn" data-service="Asistente Interno Inteligente"
+                            aria-label="Añadir servicio">
+                            <span>Añadir a la lista</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round">
+                                <line x1="12" y1="5" x2="12" y2="19" />
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="service-card service-card-wide">
+                        <div class="service-card-header" onclick="window.location.href='#contacto'">
+                            <img src="images/personalizado.png" alt="Servicio Personalizado"
+                                class="service-cover-image">
+                            <div class="service-image-overlay"><span>Ir al formulario</span></div>
+                        </div>
+                        <div class="service-card-body" onclick="window.location.href='#contacto'"
+                            style="cursor: pointer;">
+                            <h3 class="service-card-title">Servicio Personalizado</h3>
+                            <p class="service-card-desc">¿No encuentras lo que buscas? Cuéntanos cómo funciona tu
+                                negocio y diseñaremos una automatización adaptada exactamente a tus necesidades.</p>
+                        </div>
+                        <button class="service-add-btn" data-service="Personalizado / Otro"
+                            aria-label="Añadir servicio">
+                            <span>Añadir a la lista</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round">
+                                <line x1="12" y1="5" x2="12" y2="19" />
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ PROCESO ═══ -->
+        <section class="process" id="proceso" style="padding-top: 40px; padding-bottom: 40px;">
+            <div class="container">
+                <!-- ── Process Steps ── -->
+                <div class="proc-wrap">
+                    <p class="proc-eyebrow">De cero a automatizado · 5 pasos, cero complicaciones</p>
+
+                    <div class="proc-row">
+                        <!-- The connecting line behind everything -->
+                        <div class="proc-line">
+                            <div class="proc-line-fill"></div>
+                        </div>
+
+                        <div class="proc-step">
+                            <div class="proc-circle" style="--pc:#ef4444;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8" stroke-linecap="round">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                                </svg>
+                            </div>
+                            <div class="proc-connector"><span class="proc-mid-dot"></span></div>
+                            <div class="proc-text">
+                                <h5 class="proc-title">Contacto</h5>
+                                <p class="proc-sub">Cuéntanos tu caso</p>
+                                <p class="proc-desc">Analizamos tu negocio y detectamos qué procesos se pueden
+                                    automatizar.</p>
+                            </div>
+                        </div>
+
+                        <div class="proc-step">
+                            <div class="proc-circle" style="--pc:#3b82f6;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8" stroke-linecap="round">
+                                    <circle cx="11" cy="11" r="8" />
+                                    <path d="M21 21l-4.35-4.35" />
+                                </svg>
+                            </div>
+                            <div class="proc-connector"><span class="proc-mid-dot"></span></div>
+                            <div class="proc-text">
+                                <h5 class="proc-title">Diagnóstico</h5>
+                                <p class="proc-sub">Análisis gratuito</p>
+                                <p class="proc-desc">Identificamos oportunidades de automatización y te presentamos la
+                                    solución ideal.</p>
+                            </div>
+                        </div>
+
+                        <div class="proc-step">
+                            <div class="proc-circle" style="--pc:#8b5cf6;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8" stroke-linecap="round">
+                                    <path d="M9 11l3 3L22 4" />
+                                    <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+                                </svg>
+                            </div>
+                            <div class="proc-connector"><span class="proc-mid-dot"></span></div>
+                            <div class="proc-text">
+                                <h5 class="proc-title">Propuesta</h5>
+                                <p class="proc-sub">A tu medida</p>
+                                <p class="proc-desc">Plan detallado con herramientas, plazos e inversión exacta para tu
+                                    negocio.</p>
+                            </div>
+                        </div>
+
+                        <div class="proc-step">
+                            <div class="proc-circle" style="--pc:#ea8c3a;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8" stroke-linecap="round">
+                                    <circle cx="12" cy="12" r="3" />
+                                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14" />
+                                </svg>
+                            </div>
+                            <div class="proc-connector"><span class="proc-mid-dot"></span></div>
+                            <div class="proc-text">
+                                <h5 class="proc-title">Desarrollo</h5>
+                                <p class="proc-sub">Construimos e integramos</p>
+                                <p class="proc-desc">Configuramos todo y conectamos las automatizaciones con tus
+                                    herramientas actuales.</p>
+                            </div>
+                        </div>
+
+                        <div class="proc-step">
+                            <div class="proc-circle proc-circle-final" style="--pc:#22c55e;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8" stroke-linecap="round">
+                                    <polygon points="5 3 19 12 5 21 5 3" />
+                                </svg>
+                            </div>
+                            <div class="proc-connector"></div>
+                            <div class="proc-text">
+                                <h5 class="proc-title">Activación</h5>
+                                <p class="proc-sub">24/7 sin intervención</p>
+                                <p class="proc-desc">Tu negocio trabaja solo. Nosotros hacemos seguimiento y soporte
+                                    continuo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ CASOS DE USO ═══ -->
+        <section class="use-cases" id="casos">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Ejemplos de aplicación</span>
+                    <h2 class="section-title">Adaptado a tu <span class="gradient-text">sector</span></h2>
+                    <p class="section-subtitle">La automatización se adapta a distintos tipos de empresa</p>
+                </div>
+
+                <div class="use-cases-grid">
+                    <div class="use-case-card glass-card">
+                        <h3 class="use-case-title">Clínicas y Centros Médicos</h3>
+                        <ul class="use-case-list">
+                            <li>Gestión de citas y recordatorios</li>
+                            <li>Respuestas automáticas a pacientes</li>
+                            <li>Seguimiento de consultas</li>
+                            <li>Solicitud de reseñas tras la visita</li>
+                        </ul>
+                    </div>
+                    <div class="use-case-card glass-card">
+                        <h3 class="use-case-title">Gestorías y Asesorías</h3>
+                        <ul class="use-case-list">
+                            <li>Recepción y organización de documentos</li>
+                            <li>Clasificación automática de emails</li>
+                            <li>Avisos de plazos importantes</li>
+                            <li>Comunicación con clientes</li>
+                        </ul>
+                    </div>
+                    <div class="use-case-card glass-card">
+                        <h3 class="use-case-title">Inmobiliarias</h3>
+                        <ul class="use-case-list">
+                            <li>Respuesta a consultas de propiedades</li>
+                            <li>Gestión de visitas y recordatorios</li>
+                            <li>Seguimiento de interesados</li>
+                            <li>Organización de oportunidades</li>
+                        </ul>
+                    </div>
+                    <div class="use-case-card glass-card">
+                        <h3 class="use-case-title">Servicios Profesionales</h3>
+                        <ul class="use-case-list">
+                            <li>Captación de clientes</li>
+                            <li>Automatización de formularios</li>
+                            <li>Seguimiento comercial</li>
+                            <li>Gestión de tareas y clientes</li>
+                        </ul>
+                    </div>
+                    <div class="use-case-card glass-card">
+                        <h3 class="use-case-title">Tiendas Online</h3>
+                        <ul class="use-case-list">
+                            <li>Respuesta a consultas de clientes</li>
+                            <li>Seguimiento de pedidos e incidencias</li>
+                            <li>Recuperación de clientes inactivos</li>
+                            <li>Atención automática básica</li>
+                        </ul>
+                    </div>
+                    <div class="use-case-card glass-card">
+                        <h3 class="use-case-title">Hostelería</h3>
+                        <ul class="use-case-list">
+                            <li>Confirmación y recordatorio de reservas</li>
+                            <li>Solicitud de reseñas tras la visita</li>
+                            <li>Respuesta a dudas frecuentes</li>
+                            <li>Comunicación con clientes</li>
+                        </ul>
+                    </div>
+                    <div class="use-case-card glass-card">
+                        <h3 class="use-case-title">Gimnasios y Deporte</h3>
+                        <ul class="use-case-list">
+                            <li>Recordatorios de clases o sesiones</li>
+                            <li>Seguimiento de clientes inactivos</li>
+                            <li>Comunicación con socios</li>
+                            <li>Gestión de consultas</li>
+                        </ul>
+                    </div>
+                    <div class="use-case-card glass-card">
+                        <h3 class="use-case-title">Academias y Formación</h3>
+                        <ul class="use-case-list">
+                            <li>Gestión de alumnos y consultas</li>
+                            <li>Recordatorios de clases o eventos</li>
+                            <li>Seguimiento de interesados</li>
+                            <li>Comunicación automática</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ═══ FAQ (Preguntas Frecuentes) ═══ -->
+        <section class="faq" id="faq" style="padding-top: 100px; padding-bottom: 60px;">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Dudas habituales</span>
+                    <h2 class="section-title">Preguntas <span class="gradient-text">Frecuentes</span></h2>
+                    <p class="section-subtitle">Todo lo que necesitas saber sobre nuestras automatizaciones</p>
+                </div>
+
+                <div class="faq-list">
+                    <div class="faq-item glass-card">
+                        <button class="faq-question">
+                            <span>¿Cuánto tiempo se tarda en implementar una automatización?</span>
+                            <div class="faq-icon"></div>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                Depende de la complejidad, pero la mayoría de nuestras soluciones estándar (como reseñas, citas o gestión de emails) están listas y funcionando en menos de 1 o 2 semanas.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item glass-card">
+                        <button class="faq-question">
+                            <span>¿Es necesario tener conocimientos técnicos previos?</span>
+                            <div class="faq-icon"></div>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                En absoluto. Nosotros nos encargamos de toda la configuración técnica. Tu equipo solo tendrá que disfrutar de los beneficios y aprender a usar la interfaz simplificada, para lo cual os daremos formación completa.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item glass-card">
+                        <button class="faq-question">
+                            <span>¿Se puede integrar con el software que ya usamos en la empresa?</span>
+                            <div class="faq-icon"></div>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                Sí. Nuestras automatizaciones se conectan sin problema con la mayoría de CRMs, calendarios, gestores de correo y herramientas de software médico o de gestión a través de APIs e integraciones nativas.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item glass-card">
+                        <button class="faq-question">
+                            <span>¿Es seguro y cumple con la protección de datos (RGPD)?</span>
+                            <div class="faq-icon"></div>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                Totalmente. La privacidad y seguridad son fundamentales. Configuramos las automatizaciones bajo estrictos estándares de seguridad europeos para asegurar que los datos de tus clientes estén siempre protegidos.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ CONTACTO ═══ -->
+        <section class="contact-section" id="contacto">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <span class="section-label">Contacto</span>
+                        <h2 class="section-title">Veamos cómo <span class="gradient-text">automatizar</span> tu negocio
+                        </h2>
+                        <p class="contact-description">Cuéntanos tu caso y estudiaremos qué solución encaja mejor con tu
+                            negocio.</p>
+
+                        <div class="contact-method">
+                            <div class="method-icon-wrap">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                    <polyline points="22,6 12,13 2,6" />
+                                </svg>
+                            </div>
+                            <div class="method-info">
+                                <h4>Email</h4>
+                                <a href="mailto:konex@konexautomation.com">konex@konexautomation.com</a>
+                            </div>
+                        </div>
+
+                        <div class="response-note">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg>
+                            <span>Respuesta en <strong>menos de 24 horas</strong></span>
+                        </div>
+
+                        <div class="contact-features">
+                            <div class="cf-item">
+                                <div class="cf-icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round">
+                                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" />
+                                    </svg>
+                                </div>
+                                <span>Diagnóstico gratuito de tu negocio</span>
+                            </div>
+                            <div class="cf-item">
+                                <div class="cf-icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round">
+                                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" />
+                                    </svg>
+                                </div>
+                                <span>Propuesta adaptada a tus necesidades</span>
+                            </div>
+                            <div class="cf-item">
+                                <div class="cf-icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round">
+                                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" />
+                                    </svg>
+                                </div>
+                                <span>Sin compromiso</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container">
+                        <form class="contact-form glass-card" id="contactForm">
+                            <h3 class="form-title">Analicemos tu negocio</h3>
+                            <p class="form-subtitle">Revisaremos tu caso y te contactaremos para comentar los siguientes
+                                pasos.</p>
+
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="name" class="form-label">Nombre completo *</label>
+                                    <input type="text" id="name" name="name" class="form-input" placeholder="Tu nombre"
+                                        required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" class="form-label">Email *</label>
+                                    <input type="email" id="email" name="email" class="form-input"
+                                        placeholder="tu@email.com" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone" class="form-label">Teléfono / WhatsApp *</label>
+                                    <input type="tel" id="phone" name="phone" class="form-input"
+                                        placeholder="+34 600 000 000" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="company" class="form-label">Empresa / Negocio *</label>
+                                    <input type="text" id="company" name="company" class="form-input"
+                                        placeholder="Nombre de tu empresa" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group form-group-full">
+                                <label class="form-label">Servicios de interés</label>
+                                <div class="services-multiselect" id="servicesMultiselect">
+                                    <div class="services-multiselect-header" id="servicesHeader"
+                                        onclick="toggleServicesDropdown()">
+                                        <span id="servicesHeaderLabel">Selecciona los servicios</span>
+                                        <svg class="services-chevron" id="servicesChevron" width="16" height="16"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="6 9 12 15 18 9" />
+                                        </svg>
+                                    </div>
+                                    <div class="services-multiselect-dropdown" id="servicesDropdown">
+                                        <label class="services-option"><input type="checkbox" class="service-checkbox"
+                                                value="Generación de Reseñas Automática"
+                                                onchange="onDropdownChange(this)"><span
+                                                class="services-option-check"></span><span>Generación de Reseñas
+                                                Automática</span></label>
+                                        <label class="services-option"><input type="checkbox" class="service-checkbox"
+                                                value="Recordatorios de Citas" onchange="onDropdownChange(this)"><span
+                                                class="services-option-check"></span><span>Recordatorios de
+                                                Citas</span></label>
+                                        <label class="services-option"><input type="checkbox" class="service-checkbox"
+                                                value="Gestión Automática de Formularios"
+                                                onchange="onDropdownChange(this)"><span
+                                                class="services-option-check"></span><span>Gestión Automática de
+                                                Formularios</span></label>
+                                        <label class="services-option"><input type="checkbox" class="service-checkbox"
+                                                value="Recuperación de Clientes" onchange="onDropdownChange(this)"><span
+                                                class="services-option-check"></span><span>Recuperación de
+                                                Clientes</span></label>
+                                        <label class="services-option"><input type="checkbox" class="service-checkbox"
+                                                value="Chat Automático en tu Web"
+                                                onchange="onDropdownChange(this)"><span
+                                                class="services-option-check"></span><span>Chat Automático en tu
+                                                Web</span></label>
+                                        <label class="services-option"><input type="checkbox" class="service-checkbox"
+                                                value="Organización Inteligente de Emails"
+                                                onchange="onDropdownChange(this)"><span
+                                                class="services-option-check"></span><span>Organización Inteligente de
+                                                Emails</span></label>
+                                        <label class="services-option"><input type="checkbox" class="service-checkbox"
+                                                value="Asistente Interno Inteligente"
+                                                onchange="onDropdownChange(this)"><span
+                                                class="services-option-check"></span><span>Asistente Interno
+                                                Inteligente</span></label>
+                                        <label class="services-option services-option-custom"><input type="checkbox"
+                                                class="service-checkbox" value="Personalizado / Otro"
+                                                onchange="onDropdownChange(this)"><span
+                                                class="services-option-check"></span><span>Personalizado /
+                                                Otro</span></label>
+                                    </div>
+                                </div>
+                                <input type="hidden" name="services" id="servicesHiddenInput">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" class="form-label">Mensaje *</label>
+                                <textarea id="message" name="message" class="form-textarea"
+                                    placeholder="Explica brevemente cómo funciona tu negocio y qué procesos te gustaría automatizar o mejorar."
+                                    rows="5" required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-primary btn-large btn-submit">
+                                <span>Solicitar diagnóstico gratuito</span>
+                                <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                                    <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </form>
+
+                        <div class="form-success glass-card" id="formSuccess" style="display:none;">
+                            <div class="success-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.5" stroke-linecap="round">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <path d="M9 12l2 2 4-4" />
+                                </svg>
+                            </div>
+                            <h3 class="success-title">¡Solicitud enviada!</h3>
+                            <p class="success-message">Gracias por contactarnos. Hemos recibido tu mensaje y te
+                                responderemos en menos de 24 horas.</p>
+                            <button class="btn-secondary" onclick="resetForm()">Enviar otra solicitud</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ FOOTER ═══ -->
+        <footer class="footer">
+            <!-- Top gradient divider -->
+            <div class="footer-glow"></div>
+            <div class="container">
+                <!-- Main footer grid -->
+                <div class="footer-inner">
+                    <!-- Brand column -->
+                    <div class="footer-brand">
+                        <img src="images/logopng_red.png" alt="Konex Automation" class="footer-logo">
+                        <p class="footer-tagline">Automatizamos los procesos repetitivos de tu negocio para que tú puedas centrarte en lo que de verdad importa.</p>
+                        <a href="mailto:konex@konexautomation.com" class="footer-email">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                            konex@konexautomation.com
+                        </a>
+                        <!-- Social links -->
+                        <div class="footer-social">
+                            <a href="#" class="footer-social-link" aria-label="LinkedIn">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                            </a>
+                            <a href="#" class="footer-social-link" aria-label="Instagram">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Links column -->
+                    <div class="footer-col">
+                        <h4 class="footer-col-title">Navegación</h4>
+                        <nav class="footer-nav">
+                            <ul>
+                                <li><a href="#">Inicio</a></li>
+                                <li><a href="#servicios">Servicios</a></li>
+                                <li><a href="#casos">Ejemplos</a></li>
+                                <li><a href="#faq">Preguntas frecuentes</a></li>
+                                <li><a href="#contacto">Contacto</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <!-- Services column -->
+                    <div class="footer-col">
+                        <h4 class="footer-col-title">Servicios</h4>
+                        <nav class="footer-nav">
+                            <ul>
+                                <li><a href="#servicios">Generación de Reseñas</a></li>
+                                <li><a href="#servicios">Recordatorio de Citas</a></li>
+                                <li><a href="#servicios">Gestión de Formularios</a></li>
+                                <li><a href="#servicios">Chat Automático</a></li>
+                                <li><a href="#servicios">Organización de Emails</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <!-- CTA column -->
+                    <div class="footer-col footer-cta-col">
+                        <h4 class="footer-col-title">¿Listo para empezar?</h4>
+                        <p class="footer-cta-text">Diagnóstico gratuito de tu negocio. Sin compromiso.</p>
+                        <a href="#contacto" class="btn-primary-small footer-cta-btn">Contactar ahora</a>
+                    </div>
+                </div>
+
+                <!-- Bottom bar -->
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Konex Automation. Todos los derechos reservados.</p>
+                    <p class="footer-location">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        España
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+    </div><!-- end page-wrapper -->
+
+    <!-- ═══ SERVICE MODAL ═══ -->
+    <div id="serviceModal" class="service-modal">
+        <div class="service-modal-overlay" onclick="closeServiceModal()"></div>
+        <div class="service-modal-content glass-card">
+            <button class="service-modal-close" onclick="closeServiceModal()" aria-label="Cerrar">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+            </button>
+            <div class="service-modal-body" id="serviceModalBody"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
