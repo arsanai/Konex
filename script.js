@@ -520,8 +520,6 @@ function initFormValidation() {
                     email: document.getElementById('email').value.trim(),
                     telefono: document.getElementById('phone').value.trim(),
                     empresa: document.getElementById('company').value.trim() || 'No especificado',
-                    tamano_empresa: getSelectLabel('companySize'),
-                    presupuesto: getSelectLabel('budget'),
                     servicios: document.getElementById('servicesHiddenInput').value || 'No especificado',
                     mensaje: document.getElementById('message').value.trim(),
                     fecha: new Date().toISOString(),
@@ -530,7 +528,7 @@ function initFormValidation() {
 
                 try {
                     // Send data to n8n webhook
-                    const response = await fetch('https://n8n.konexautomation.com/webhook/e7fa447a-d869-4bba-a1d4-02291bde5a00', {
+                    const response = await fetch('https://hooks.konexautomation.com/webhook/e7fa447a-d869-4bba-a1d4-02291bde5a00', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
@@ -597,20 +595,20 @@ function resetForm() {
 // =====================================================
 function initFAQ() {
     const faqItems = document.querySelectorAll('.faq-item');
-    
+
     faqItems.forEach(item => {
         const question = item.querySelector('.faq-question');
         const answer = item.querySelector('.faq-answer');
-        
+
         question.addEventListener('click', () => {
             const isActive = item.classList.contains('active');
-            
+
             // Close all other items
             faqItems.forEach(otherItem => {
                 otherItem.classList.remove('active');
                 otherItem.querySelector('.faq-answer').style.maxHeight = null;
             });
-            
+
             // Toggle current item
             if (!isActive) {
                 item.classList.add('active');
@@ -1115,36 +1113,36 @@ function openServiceModal(serviceId) {
     const modalBody = document.getElementById('serviceModalBody');
     const pageWrapper = document.getElementById('page-wrapper');
     const modalContent = document.querySelector('.service-modal-content');
-    
+
     if (modal && modalBody && serviceModalData[serviceId]) {
         modalBody.innerHTML = serviceModalData[serviceId];
         modal.classList.add('open');
-        
+
         if (pageWrapper) {
             pageWrapper.classList.add('page-blurred');
         }
-        
+
         // Reset scroll position to the top
         if (modalContent) {
             modalContent.scrollTop = 0;
         }
-        
+
         // Prevent body scroll
         document.body.style.overflow = 'hidden';
     } else if (modal && modalBody) {
         // Fallback for services without specific content yet
         modalBody.innerHTML = '<h2>Más información próximamente</h2><p>Estamos preparando los detalles de este servicio. Por favor, contáctanos para más información.</p>';
         modal.classList.add('open');
-        
+
         if (pageWrapper) {
             pageWrapper.classList.add('page-blurred');
         }
-        
+
         // Reset scroll position to the top
         if (modalContent) {
             modalContent.scrollTop = 0;
         }
-        
+
         document.body.style.overflow = 'hidden';
     }
 }
@@ -1152,15 +1150,15 @@ function openServiceModal(serviceId) {
 function closeServiceModal() {
     const modal = document.getElementById('serviceModal');
     const pageWrapper = document.getElementById('page-wrapper');
-    
+
     if (modal) {
         modal.classList.remove('open');
     }
-    
+
     if (pageWrapper) {
         pageWrapper.classList.remove('page-blurred');
     }
-    
+
     // Restore body scroll
     document.body.style.overflow = '';
 }
